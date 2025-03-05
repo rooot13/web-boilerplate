@@ -1,1 +1,144 @@
 @import "tailwindcss";
+
+@plugin "tailwindcss-animate";
+
+@custom-variant dark (&:is(.dark *));
+
+/* Define the new grayscale color variables */
+:root {
+  --primary-100: #1a1a1a; /* Dark Gray */
+  --primary-200: #404040; /* Medium Gray */
+  --primary-300: #737373; /* Light Gray */
+  --accent-100: #b3b3b3; /* Soft Gray */
+  --accent-200: #e6e6e6; /* Very Light Gray */
+  --text-100: #000000; /* Pure Black */
+  --text-200: #333333; /* Darker Gray */
+  --bg-100: #ffffff; /* Pure White */
+  --bg-200: #f5f5f5; /* Slightly Off White */
+  --bg-300: #cccccc; /* Light Gray */
+
+  /* Base Theme Colors */
+  --background: var(--bg-100);
+  --foreground: var(--text-100);
+  --card: var(--bg-200);
+  --card-foreground: var(--text-100);
+  --popover: var(--bg-100);
+  --popover-foreground: var(--text-100);
+  --primary: var(--primary-100);
+  --primary-foreground: var(--bg-100);
+  --secondary: var(--primary-300);
+  --secondary-foreground: var(--primary-100);
+  --muted: var(--bg-200);
+  --muted-foreground: var(--text-200);
+  --accent: var(--accent-100);
+  --accent-foreground: var(--text-100);
+  --destructive: var(--primary-200);
+  --destructive-foreground: var(--bg-100);
+  --border: var(--bg-300);
+  --input: var(--bg-300);
+  --ring: var(--accent-200);
+  --chart-1: var(--primary-100);
+  --chart-2: var(--primary-200);
+  --chart-3: var(--primary-300);
+  --chart-4: var(--accent-100);
+  --chart-5: var(--accent-200);
+  --radius: 0.625rem;
+
+  /* Sidebar Colors */
+  --sidebar: var(--bg-100);
+  --sidebar-foreground: var(--text-100);
+  --sidebar-primary: var(--primary-100);
+  --sidebar-primary-foreground: var(--bg-100);
+  --sidebar-accent: var(--accent-100);
+  --sidebar-accent-foreground: var(--text-100);
+  --sidebar-border: var(--bg-300);
+  --sidebar-ring: var(--accent-200);
+}
+
+/* Dark Mode Colors */
+.dark {
+  --background: var(--text-100);
+  --foreground: var(--bg-100);
+  --card: var(--text-100);
+  --card-foreground: var(--bg-100);
+  --popover: var(--text-100);
+  --popover-foreground: var(--bg-100);
+  --primary: var(--primary-200);
+  --primary-foreground: var(--text-100);
+  --secondary: var(--primary-300);
+  --secondary-foreground: var(--primary-100);
+  --muted: var(--bg-300);
+  --muted-foreground: var(--bg-200);
+  --accent: var(--accent-200);
+  --accent-foreground: var(--bg-100);
+  --destructive: var(--primary-300);
+  --destructive-foreground: var(--bg-100);
+  --border: var(--bg-300);
+  --input: var(--bg-300);
+  --ring: var(--accent-100);
+  --chart-1: var(--primary-100);
+  --chart-2: var(--primary-200);
+  --chart-3: var(--primary-300);
+  --chart-4: var(--accent-100);
+  --chart-5: var(--accent-200);
+
+  /* Sidebar Colors */
+  --sidebar: var(--text-100);
+  --sidebar-foreground: var(--bg-100);
+  --sidebar-primary: var(--primary-100);
+  --sidebar-primary-foreground: var(--bg-100);
+  --sidebar-accent: var(--accent-100);
+  --sidebar-accent-foreground: var(--bg-100);
+  --sidebar-border: var(--bg-300);
+  --sidebar-ring: var(--accent-200);
+}
+
+/* Apply Colors */
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+/* Base Styles */
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
