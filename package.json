@@ -4,9 +4,9 @@
   "private": true,
   "scripts": {
     "dev": "dotenv -e .env -- next dev",
-    "build": "next build",
-    "start": "dotenv -e .env -- next start",
-    "postinstall": "prisma generate"
+    "build": "prisma generate && next build",
+    "postinstall": "prisma generate",
+    "start": "dotenv -e .env -- next start"
   },
   "dependencies": {
     "@kinde-oss/kinde-auth-nextjs": "^2.5.3",
