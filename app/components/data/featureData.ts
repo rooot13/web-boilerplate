@@ -1,4 +1,3 @@
-import { ReactNode } from "react";
 import { ShieldCheck, Rocket, Code, LucideIcon } from "lucide-react";
 
 interface Feature {
